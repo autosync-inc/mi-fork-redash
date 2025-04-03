@@ -163,8 +163,8 @@ class Athena(BaseQueryRunner):
             }
         else:
             return {
-                "aws_access_key_id": self.configuration.get("aws_access_key", None),
-                "aws_secret_access_key": self.configuration.get("aws_secret_key", None),
+                "aws_access_key_id": self.configuration.get("aws_access_key", None) or None,
+                "aws_secret_access_key": self.configuration.get("aws_secret_key", None) or None,
                 "region_name": self.configuration["region"],
             }
 
